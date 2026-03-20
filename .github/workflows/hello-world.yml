@@ -1,0 +1,20 @@
+name: thử nghiệm đọc file README #Tên quy trình
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  thuc_hanh_doc_file:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Bước 1 - Xin chào
+        run: echo "hello world"
+
+      - name: Bước 2 - Tải code
+        uses: actions/checkout@v4 # Robot tự động copy code vào máy ảo
+
+      - name: Bước 3 - Đọc file
+        run: cat README.md # Mở nội dung file README.md để xem
